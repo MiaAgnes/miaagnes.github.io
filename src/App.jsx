@@ -1,27 +1,43 @@
-import { BrowserRouter, Routes, Route, NavLink } from "react-router";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Hero from "./Components/Hero/Hero";
+import AboutMe from "./Components/AboutMe";
+import FactCard from "./Components/FactCard";
+import ProjectsSection from "./Components/ProjectsSection";
+import ProjectCard from "./Components/ProjectCard";
+import SkillsSection from "./Components/SkillsSection";
+import SkillItem from "./Components/SkillItem";
+import ContactSection from "./Components/ContactSection";
+import "./App.scss";
+
 
 function App() {
   return (
     <>
-      <nav>
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <section>
+        <Hero />
+      </section>
+       <section>
+        <AboutMe />
+      </section>
+       <section>
+        <FactCard />
+      </section>
+       <section>
+        <ProjectsSection />
+      </section>
+       <section>
+        <ProjectCard />
+      </section>
+       <section>
+        <SkillsSection />
+      </section>
+       <section>
+        <SkillItem />
+      </section>
+       <section>
+        <ContactSection />
+      </section>
     </>
   );
 }
 export default App;
+
