@@ -1,11 +1,8 @@
 import Hero from "./Components/Hero/Hero";
-import AboutMe from "./Components/AboutMe";
-import FactCard from "./Components/FactCard";
-import ProjectsSection from "./Components/ProjectsSection";
-import ProjectCard from "./Components/ProjectCard";
-import SkillsSection from "./Components/SkillsSection";
-import SkillItem from "./Components/SkillItem";
-import ContactSection from "./Components/ContactSection";
+import AboutMe from "./Components/AboutMe/AboutMe";
+import ProjectsSection from "./Components/ProjectsSection/ProjectsSection";
+import SkillSection from "./Components/SkillSection/SkillSection";
+import ContactSection from "./Components/ContactSection/ContactSection";
 import "./App.scss";
 
 
@@ -19,19 +16,10 @@ function App() {
         <AboutMe />
       </section>
        <section>
-        <FactCard />
-      </section>
-       <section>
         <ProjectsSection />
       </section>
        <section>
-        <ProjectCard />
-      </section>
-       <section>
-        <SkillsSection />
-      </section>
-       <section>
-        <SkillItem />
+        <SkillSection />
       </section>
        <section>
         <ContactSection />

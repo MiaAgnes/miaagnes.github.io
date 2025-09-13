@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
+
+.factCard {
+  width: 18vw;
+  height: auto;
+  border-radius: 1vw;
+}
+.factCard:nth-child(1) {
+  transform: translate(-2vw, 0vh);
+}
+.factCard:nth-child(2) {
+  transform: translate(-4vw, -8vh);
+}
+.factCard:nth-child(3) {
+  transform: translate(6vw, -1vh);
+}
+.factCard:nth-child(4) {
+  transform: translate(3vw, -8vh);
+}
+
+.aboutMeBg {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('/images/about-me-baggrund.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: rgb(81, 90, 99);
+}
+
+.aboutMeText {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: rgb(81, 90, 99);
+    padding-top: 1vh;
+    text-align: center;
+}
+
+.factGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4vw 8vh;
+  justify-items: center;
+  align-items: center;
+  width: 60vw;
+  margin: 10vh auto 0 auto;
+}
