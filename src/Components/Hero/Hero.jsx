@@ -11,14 +11,28 @@ export default function Hero() {
         <h2 className={styles.text}>Mia Agnes Tandal Danielsen</h2>
         <h2 className={styles.text}>Multimediedesigner studerende</h2>
         <p className={styles.frontendText}>Frontend-design, hvor processen er lige så vigtig som resultatet.</p>
-        <button>Se mine Projekter</button>
+        <button onClick={() => {
+          const el = document.getElementById('projects');
+          console.log("knap trykket");
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}>
+          Se mine Projekter
+        </button>
         <div className={styles.vinylContainer}>
           <img className={styles.vinylImage} src="/images/vinylplade-hero.png" alt="Vinyl" />
         </div>
           <div className={styles.iconRow}>
-            <img src="/images/github.png" alt="GitHub" />
-            <img src="/images/linkedin.png" alt="LinkedIn" />
-            <img src="/images/mail.png" alt="Mail" />
+            <a href="https://github.com/MiaAgnes" target="_blank" rel="noopener noreferrer">
+              <img src="/images/github.png" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/mia-agnes-danielsen-0ba666339/" target="_blank" rel="noopener noreferrer">
+              <img src="/images/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="mailto:miatd03@yahoo.dk" target="_blank" rel="noopener noreferrer">
+              <img src="/images/mail.png" alt="Mail" />
+            </a>
           </div>
         </div>
       </div>
