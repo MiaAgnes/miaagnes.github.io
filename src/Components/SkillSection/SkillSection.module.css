@@ -1,3 +1,33 @@
+.vinyl:nth-child(1) {
+	animation: spin1 3s linear infinite;
+}
+.vinyl:nth-child(2) {
+	animation: spin2 3s linear infinite;
+}
+.vinyl:nth-child(3) {
+	animation: spin3 3s linear infinite;
+}
+
+@keyframes spin1 {
+	0% { transform: translate(3vw, -4vh) rotate(0deg); }
+	100% { transform: translate(3vw, -4vh) rotate(360deg); }
+}
+@keyframes spin2 {
+	0% { transform: translate(0vw, 4vh) rotate(0deg); }
+	100% { transform: translate(0vw, 4vh) rotate(360deg); }
+}
+@keyframes spin3 {
+	0% { transform: translate(16vw, -1vh) rotate(0deg); }
+	100% { transform: translate(16vw, -1vh) rotate(360deg); }
+}
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
+
+.skillSectionBg {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgb(81, 90, 99);
+}
+
 .skillSectionBg {
 	position: relative;
 	width: 100%;
@@ -7,3 +37,31 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+.skillSectionText {
+   font-size: 2rem;
+   margin: 0 auto;
+   padding-top: 3vh;
+   text-align: center;
+}
+
+.vinyl
+{
+	width: 16vw;
+	height: auto;
+	border-radius: 1vw;
+	animation: spin 3s linear infinite;
+}
+
+.vinylGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 4vw 8vh;
+	justify-items: center;
+	align-items: center;
+	width: 60vw;
+	margin: 10vh auto 0 auto;
+}
+
+

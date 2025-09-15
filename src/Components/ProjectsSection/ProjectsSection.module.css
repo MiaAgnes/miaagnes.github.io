@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
 .projectsSectionBg {
 	position: relative;
 	width: 100%;
@@ -6,4 +7,41 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	font-family: 'Cormorant Garamond', serif;
+	font-style: italic;
+	color: rgb(81, 90, 99);
+}
+
+.projectsSectionText {
+   font-size: 2rem;
+   margin: 0 auto;
+   padding-top: 3vh;
+   text-align: center;
+}
+
+.projectGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 4vw 8vh;
+	justify-items: center;
+	align-items: center;
+	width: 60vw;
+	margin: 10vh auto 0 auto;
+}
+
+.project {
+	width: 16vw;
+	height: auto;
+	border-radius: 1vw;
+}
+
+.project:nth-child(1) {
+	transform: translate(2vw, 5vh);
+}
+.project:nth-child(2) {
+	transform: translate(-2vw, -5vh);
+}
+.project:nth-child(3) {
+	transform: translate(22vw, -8vh);
 }

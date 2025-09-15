@@ -8,7 +8,7 @@ import "./App.scss";
 
 function App() {
   return (
-    <>
+    <div className="background">
       <section>
         <Hero />
       </section>
@@ -24,7 +24,7 @@ function App() {
        <section>
         <ContactSection />
       </section>
-    </>
+    </div>
   );
 }
 export default App;

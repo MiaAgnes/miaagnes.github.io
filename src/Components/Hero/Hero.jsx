@@ -2,20 +2,7 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
-      <img 
-        src="/images/hero-baggrund.png" 
-        alt="Hero baggrund" 
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          zIndex: -1
-        }}
-      />
+    <div className={styles.hero}>
         <div className={styles.polaroidContainer}>
           <img src="/images/polaroid-ramme-hero.png" alt="polaroid" />
         </div>
@@ -34,6 +21,6 @@ export default function Hero() {
             <img src="/images/mail.png" alt="Mail" />
           </div>
         </div>
-      </section>
+      </div>
   );
 }
