@@ -7,7 +7,7 @@ export default function ProjectsSection() {
           <h2>Mine tidligere projekter</h2>
         </div>
         <div className={styles.projectGrid}>
-                <img className={styles.project} src="/public/images/steno-polaroid.png" alt="project" />
+                <img className={styles.project} src="/images/steno-polaroid.png" alt="project" />
                   <img className={styles.project} src="/images/ol-polaroid.png" alt="project" />
                   <img className={styles.project} src="/images/mindwaves-polaroid.png" alt="project" />
               </div>
