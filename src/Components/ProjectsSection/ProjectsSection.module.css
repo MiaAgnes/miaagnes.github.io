@@ -1,47 +1,125 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
+/* ------------------ Siden ------------------ */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap'); 
+
 .projectsSectionBg {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	background-image: url('/images/project-baggrund.png');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	font-family: 'Cormorant Garamond', serif;
-	font-style: italic;
-	color: 292828;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/project-baggrund.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #292828;
 }
 
 .projectsSectionText {
-   font-size: 2rem;
-   margin: 0 auto;
-   padding-top: 3vh;
-   text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    padding-top: 3vh;
+    text-align: center;
 }
 
 .projectGrid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	gap: 4vw 8vh;
-	justify-items: center;
-	align-items: center;
-	width: 60vw;
-	margin: 10vh auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4vw 8vh;
+    justify-items: center;
+    align-items: center;
+    width: 60vw;
+    margin: 10vh auto 0 auto;
+}
+
+.projectWrapper {
+   display: inline-block;
+  cursor: pointer;
+  animation: breeze 10s ease-in-out infinite;
+}
+
+@keyframes breeze {
+  0%   { transform: translate(0px, 0px); }
+  15%  { transform: translate(8px, -5px); }
+  30%  { transform: translate(-6px, 4px); }
+  45%  { transform: translate(5px, -3px); }
+  60%  { transform: translate(-4px, 6px); }
+  75%  { transform: translate(7px, -4px); }
+  90%  { transform: translate(-5px, 3px); }
+  100% { transform: translate(0px, 0px); }
 }
 
 .project {
-	width: 16vw;
-	height: auto;
-	border-radius: 1vw;
+  width: 16vw;
+  height: auto;
+  border-radius: 1vw;
 }
 
-.project:nth-child(1) {
-	transform: translate(2vw, 5vh);
+.project1 { transform: translate(2vw, 5vh); }
+.project2 { transform: translate(-2vw, -5vh); }
+.project3 { transform: translate(22vw, -8vh); }
+
+/* ------------------ Modal ------------------ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
 }
-.project:nth-child(2) {
-	transform: translate(-2vw, -5vh);
+
+.modalContent {
+    position: relative;
+    max-width: 80vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.project:nth-child(3) {
-	transform: translate(22vw, -8vh);
+
+.modalImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1vw;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
+
+.modalImage:hover {
+    transform: scale(1.05);
+}
+
+/* Close button */
+.closeButton {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    font-size: 3rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation buttons */
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.prevButton { left: -3rem; }
+.nextButton { right: -3rem; }

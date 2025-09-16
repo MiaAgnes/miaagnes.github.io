@@ -1,3 +1,36 @@
+.pil {
+    font-family: initial;
+    font-style: normal;
+    color: initial;
+    font-size: unset;
+    font-weight: normal;
+     width: 100%;
+    text-align: center;
+    color: #e0edf8;
+    position: absolute;
+    left: 0;
+    bottom: 1vh;
+    z-index: 2;
+    margin-bottom: 3vh;
+    padding: 0% 25vw;
+    font-size: 3rem;
+     font-family: initial;
+}
+.bottomText {
+    width: 100%;
+    text-align: center;
+    color: 292828;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+    bottom: 1vh;
+    z-index: 2;
+    margin-bottom: 10vh;
+    padding: 0% 25vw;
+    font-size: 1.75rem;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
 .frontendText {
     max-width: 28ch;
@@ -90,6 +123,7 @@ button:hover::after {
 @keyframes shine {
   100% { left: 125%; }
 }
+
 .iconRow {
     display: flex;
     flex-direction: row;
@@ -106,7 +140,7 @@ img {
     z-index: 2;
 }
 
-img[alt="Mail"] {
+img[alt="MailHero"] {
     width: 5vh;
     height: 7.5vh;
     margin-right: 0;
@@ -131,3 +165,4 @@ img[alt="Mail"] {
     margin-top: -8vh;
     z-index: 1;
 }
+

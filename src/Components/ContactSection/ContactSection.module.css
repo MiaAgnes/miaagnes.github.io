@@ -48,7 +48,8 @@
     padding-top: 8vh;
 }
 
-img[alt="tape"] {
-    width: 50vh;
-    height: 9.5vh;
+img[alt="Navn"], img[alt="Telefon"], img[alt="Mail"] {
+    width: 45vh;
+    height: 11vh;
 }
+

@@ -6,13 +6,18 @@ export default function ContactSection() {
       <div className={styles.contactSectionText}>
         <h2>Get in touch</h2>
         <div className={styles.contactSectionContent}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis neque incidunt sapiente magni aliquid necessitatibus nisi quae, suscipit molestias eligendi laudantium deleniti adipisci, obcaecati praesentium perspiciatis enim? Commodi, numquam dolore?</p>
+          <p>Tak for at bruge din tid på at kigge forbi min portfolio. Hvis du har spørgsmål eller ønsker at komme i kontakt med mig, er du mere end velkommen til at række ud!</p>
         </div>
       </div>
       <div className={styles.tapeColumn}>
-        <img className={styles.tape} src="/images/tape.png" alt="tape" />
-        <img className={styles.tape} src="/images/tape.png" alt="tape" />
-        <img className={styles.tape} src="/images/tape.png" alt="tape" />
+        <img className={styles.tape} src="/images/tape-navn.png" alt="Navn" />
+        <a href="tel:+4512345678" className={styles.tapeTlf}>
+          <img src="/images/tape-tlf.png" alt="Telefon" />
+        </a>
+
+        <a href="mailto:miatd03@yahoo.dk" className={styles.tapeMail}>
+          <img src="/images/tape-mail.png" alt="Mail" />
+        </a>
       </div>
     </section>
   );
