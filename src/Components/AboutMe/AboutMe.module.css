@@ -38,6 +38,7 @@
   color: 292828;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
+  padding-top: 2vh;
 }
 
 /* ------------------ Faktakort grid ------------------ */
@@ -45,7 +46,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 4vw 8vh;
+  gap: 2vw 8vh;
   justify-items: center;
   align-items: center;
   width: 60vw;

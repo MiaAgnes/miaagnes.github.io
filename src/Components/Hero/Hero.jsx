@@ -39,7 +39,15 @@ export default function Hero() {
           Velkommen til min portfolio! Scroll ned og lær mere omkring mig, mine tidligere projekter, kompetencer, erfaringer og vær mere en velkommen til at kontakte mig, hvis jeg virker som et match for dig!
         </div>
         <br />
-        <div className={styles.pil}>
+        <div
+          className={styles.pil}
+          onClick={() => {
+            const el = document.getElementById('aboutme');
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          style={{ cursor: 'pointer' }}>
           <p>⮟</p>
         </div>
     </div>

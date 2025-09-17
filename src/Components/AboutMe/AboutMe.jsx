@@ -2,9 +2,9 @@ import styles from "./AboutMe.module.css";
 
 export default function AboutMe() {
   return (
-    <div className={styles.aboutMeBg}>
+    <div id="aboutme" className={styles.aboutMeBg}>
       <h2 className={styles.aboutMeText}>Om mig</h2>
-      <p className={styles.aboutMeDescription}>Lær lidt mere omkring mig og hvad jeg laver</p>
+      <p className={styles.aboutMeDescription}>Lær lidt mere omkring mig og hvad jeg kan lide at lave</p>
       <div className={styles.factGrid}>
           <div className={styles.factCardWrapper}>
             <img
