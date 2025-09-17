@@ -5,7 +5,7 @@ export default function ContactSection() {
     <section className={styles.contactSectionBg}  >
       <div className={styles.contactSectionText}>
         <h2>Get in touch</h2>
-        <div className={styles.contactSectionContent}>
+        <div className={styles.contactSectionDescription}>
           <p>Tak for at bruge din tid på at kigge forbi min portfolio. Hvis du har spørgsmål eller ønsker at komme i kontakt med mig, er du mere end velkommen til at række ud!</p>
         </div>
       </div>

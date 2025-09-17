@@ -4,6 +4,7 @@ export default function AboutMe() {
   return (
     <div className={styles.aboutMeBg}>
       <h2 className={styles.aboutMeText}>Om mig</h2>
+      <p className={styles.aboutMeDescription}>Lær lidt mere omkring mig og hvad jeg laver</p>
       <div className={styles.factGrid}>
           <div className={styles.factCardWrapper}>
             <img

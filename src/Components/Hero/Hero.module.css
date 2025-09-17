@@ -76,13 +76,13 @@ img[alt="polaroid"] {
     position: relative;
 }
 
-button {
+.button {
     margin-top: 1.5vh;
     font-size: 1.5rem;
     cursor: pointer;
     border: none;
     background-color: #bfdaf7;
-    color: #292828;
+    color: 292828;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: bold;
@@ -97,11 +97,11 @@ button {
     overflow: hidden;
 }
 
-button:hover {
+.button:hover {
   transform: scale(1.05);
 }
 
-button::after {
+.button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -116,7 +116,7 @@ button::after {
   transform: skewX(-20deg);
 }
 
-button:hover::after {
+.button:hover::after {
   animation: shine 0.8s forwards;
 }
 

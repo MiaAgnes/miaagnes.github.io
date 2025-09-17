@@ -11,7 +11,7 @@ export default function Hero() {
         <h2 className={styles.text}>Mia Agnes Tandal Danielsen</h2>
         <h2 className={styles.text}>Multimediedesigner studerende</h2>
         <p className={styles.frontendText}>Frontend-design, hvor processen er lige så vigtig som resultatet.</p>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           const el = document.getElementById('projects');
           console.log("knap trykket");
           if (el) {
