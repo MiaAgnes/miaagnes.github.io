@@ -5,40 +5,6 @@
     line-height: 1.3;
 }
 
-.pil {
-    font-family: initial;
-    font-style: normal;
-    color: initial;
-    font-size: unset;
-    font-weight: normal;
-     width: 100%;
-    text-align: center;
-    color: #e0edf8;
-    position: absolute;
-    left: 0;
-    bottom: 1vh;
-    z-index: 2;
-    margin-bottom: 3vh;
-    padding: 0% 25vw;
-    font-size: 3rem;
-     font-family: initial;
-}
-
-.bottomText {
-    width: 100%;
-    text-align: center;
-    color: 292828;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    position: absolute;
-    left: 0;
-    bottom: 1vh;
-    z-index: 2;
-    margin-bottom: 10vh;
-    padding: 0% 25vw;
-    font-size: 1.75rem;
-}
-
 .polaroidContainer {
     padding-left: 5vw;
 }
@@ -52,8 +18,6 @@ img[alt="polaroid"] {
      font-style: italic;
      font-size: 2.5rem;
      color: 292828;
-     margin: 0;
-     padding: 0;
 }
 
 .hero {
@@ -76,8 +40,14 @@ img[alt="polaroid"] {
     position: relative;
 }
 
+.cv {
+    color: #ceeff1;
+    position: relative;
+    z-index: 10;
+}
+
 .button {
-    margin-top: 1.5vh;
+    margin-top: 2vh;
     font-size: 1.5rem;
     cursor: pointer;
     border: none;
@@ -130,6 +100,7 @@ img[alt="polaroid"] {
     align-items: center;
     position: relative;
     z-index: 2;
+    margin-top: 1vh;
 }
 
 img {
@@ -162,7 +133,40 @@ img[alt="MailHero"] {
 .vinylContainer { 
     position: absolute;
     padding-left: 15vw;
-    margin-top: -8vh;
+    margin-top: -11vh;
     z-index: 1;
 }
 
+.bottomText {
+    width: 100%;
+    text-align: center;
+    color: 292828;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+    bottom: 1vh;
+    z-index: 2;
+    margin-bottom: 10vh;
+    padding: 0% 25vw;
+    font-size: 1.75rem;
+}
+
+.pil {
+    font-family: initial;
+    font-style: normal;
+    color: initial;
+    font-size: unset;
+    font-weight: normal;
+     width: 100%;
+    text-align: center;
+    color: #e0edf8;
+    position: absolute;
+    left: 0;
+    bottom: 1vh;
+    z-index: 2;
+    margin-bottom: 3vh;
+    padding: 0% 25vw;
+    font-size: 3rem;
+     font-family: initial;
+}

@@ -6,11 +6,13 @@ export default function Hero() {
       <div className={styles.polaroidContainer}>
         <img src="/images/polaroid-ramme-hero.png" alt="polaroid" />
       </div>
-
       <div>
         <h2 className={styles.text}>Mia Agnes Tandal Danielsen</h2>
         <h2 className={styles.text}>Multimediedesigner studerende</h2>
         <p className={styles.frontendText}>Frontend-design, hvor processen er lige så vigtig som resultatet.</p>
+        <div>
+          <a className={styles.cv} href="/CV.pdf" download>Download mit CV</a>
+        </div>
         <button className={styles.button} onClick={() => {
           const el = document.getElementById('projects');
           console.log("knap trykket");
