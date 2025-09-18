@@ -38,14 +38,12 @@
 	margin: 10vh auto 0 auto;
 }
 
-/* ------------------ Wrapper med statisk transform ------------------ */
 .projectWrapper {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
-/* ------------------ Breeze-animation ------------------ */
 .breezeWrapper {
   display: inline-block;
   animation: breeze 10s ease-in-out infinite;
@@ -62,12 +60,10 @@
   100% { transform: translate(0px, 0px); }
 }
 
-/* Statisk grid-placering */
 .project1 { transform: translate(3vw, 5vh); }
 .project2 { transform: translate(-2vw, -5vh); }
 .project3 { transform: translate(22vw, -10vh); }
 
-/* Billede */
 .project {
   width: 16vw;
   height: auto;
@@ -103,7 +99,6 @@
   border-radius: 1vw;
 }
 
-/* Close button */
 .closeButton {
   position: absolute;
   top: -1.5rem;

@@ -46,7 +46,6 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      {/* Modal */}
       {activeIndex !== null && (
         <div className={styles.modal} onClick={closeModal}>
           <div

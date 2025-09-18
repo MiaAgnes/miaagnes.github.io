@@ -41,7 +41,6 @@
   padding-top: 2vh;
 }
 
-/* ------------------ Faktakort grid ------------------ */
 .factGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -53,14 +52,12 @@
   margin: 10vh auto 0 auto;
 }
 
-/* ------------------ Faktakort ------------------ */
 .factCardWrapper {
    display: inline-block;
-  position: relative; /* vigtigt */
+  position: relative; 
   animation: breeze 8s ease-in-out infinite;
 }
 
-/* Forskudt animation per kort */
 .factCardWrapper:nth-child(1) { animation-delay: 0s; }
 .factCardWrapper:nth-child(2) { animation-delay: 1s; }
 .factCardWrapper:nth-child(3) { animation-delay: 2s; }
@@ -75,13 +72,11 @@
   100% { transform: translate(0px, 0px) rotate(0deg); }
 }
 
-/* Selve billedet */
 .factCard {
   width: 18vw;
   height: auto;
   border-radius: 1vw;
 }
 
-/* Individuelle positioner */
 .factCard:nth-child(1) { transform: translate(0vw, -4vh); }
 
