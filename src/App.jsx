@@ -3,7 +3,7 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import ProjectsSection from "./Components/ProjectsSection/ProjectsSection";
 import SkillSection from "./Components/SkillSection/SkillSection";
 import ContactSection from "./Components/ContactSection/ContactSection";
-import "./App.scss";
+import "./App.css";
 
 
 function App() {
