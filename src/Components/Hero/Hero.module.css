@@ -10,8 +10,21 @@
 }
 
 img[alt="polaroid"] {
-    width: 30vh;
-    height: 35vh;
+        width: 30vh;
+        height: 35vh;
+        animation: polaroidWobble 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes polaroidWobble {
+    0% {
+        transform: rotate(-2deg) scale(1);
+    }
+    50% {
+        transform: rotate(2deg) scale(1.03);
+    }
+    100% {
+        transform: rotate(-2deg) scale(1);
+    }
 }
 .text {
      font-family: 'Cormorant Garamond', serif;

@@ -44,20 +44,25 @@
   cursor: pointer;
 }
 
-.breezeWrapper {
-  display: inline-block;
-  animation: breeze 10s ease-in-out infinite;
+
+.project {
+  width: 16vw;
+  height: auto;
+  border-radius: 1vw;
+  display: block;
+  animation: polaroidWobble 3.5s ease-in-out infinite alternate;
 }
 
-@keyframes breeze {
-  0%   { transform: translate(0px, 0px); }
-  15%  { transform: translate(8px, -5px); }
-  30%  { transform: translate(-6px, 4px); }
-  45%  { transform: translate(5px, -3px); }
-  60%  { transform: translate(-4px, 6px); }
-  75%  { transform: translate(7px, -4px); }
-  90%  { transform: translate(-5px, 3px); }
-  100% { transform: translate(0px, 0px); }
+@keyframes polaroidWobble {
+  0% {
+    transform: rotate(-2deg) scale(1);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.03);
+  }
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
 }
 
 .project1 { transform: translate(3vw, 5vh); }
