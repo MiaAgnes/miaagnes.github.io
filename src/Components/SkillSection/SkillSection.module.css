@@ -117,6 +117,6 @@
   transform-origin: 50% 50%;
 }
 
-.vinyl1:hover .progressPath { stroke-dasharray: 180 301.59; }
-.vinyl2:hover .progressPath { stroke-dasharray: 165 301.59; }
-.vinyl3:hover .progressPath { stroke-dasharray: 145 301.59; }
+.vinyl1:hover .progressPath { stroke-dasharray: 211 301.59; }
+.vinyl2:hover .progressPath { stroke-dasharray: 226 301.59; }
+.vinyl3:hover .progressPath { stroke-dasharray: 187 301.59; }

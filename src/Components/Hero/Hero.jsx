@@ -11,7 +11,7 @@ export default function Hero() {
         <h2 className={styles.text}>Multimediedesigner studerende</h2>
         <p className={styles.frontendText}>Frontend-design, hvor processen er lige så vigtig som resultatet.</p>
         <div>
-          <a className={styles.cv} href="/CV.pdf" download>Download mit CV</a>
+          <a className={styles.cv} href="/Cv-Agnes.pdf" download>Download mit CV</a>
         </div>
         <button className={styles.button} onClick={() => {
           const el = document.getElementById('projects');
@@ -50,7 +50,7 @@ export default function Hero() {
             }
           }}
           style={{ cursor: 'pointer' }}>
-          <p>⮟</p>
+          <p>⌄</p>
         </div>
     </div>
   );
