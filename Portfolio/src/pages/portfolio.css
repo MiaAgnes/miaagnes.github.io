@@ -2,28 +2,31 @@
 .pm-root {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 .pm-panels {
-  display: flex;
-  flex-direction: row;
-  width: 600vw; /* 6 panels */
+  /* single-panel container now: render the active page and allow vertical scrolling */
+  display: block;
+  width: 100%;
   height: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .pm-panel {
-  scroll-snap-align: start;
+  /* allow the panel to grow vertically and be scrollable when content overflows */
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1.2rem;
   box-sizing: border-box;
   background: linear-gradient(180deg, #5ea0d1 0%, #8a66c9 60%, #b27adf 100%);
+  /* Make the panel background follow the content when the panel is scrolled */
+  background-attachment: local;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: rgba(255,255,255,0.95);
   position: relative;
   display: flex;
   align-items: flex-start;
+  overflow-y: auto;
 }
 .pm-panel .pm-inner {
   width: 100%;

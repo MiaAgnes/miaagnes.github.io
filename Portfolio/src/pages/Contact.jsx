@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './Contact.module.css'
 import Burger from '../components/Burger'
 
-export default function Contact() {
+export default function Contact({ onBurger }) {
   return (
     <section className={styles.panel}>
-      <Burger />
+      <Burger onClick={onBurger} />
       <div className={styles.inner}>
         <h2>Kontakt mig</h2>
         <p>Lad os tage en snak! Jeg er altid åben for samarbejder eller nye projekter.</p>

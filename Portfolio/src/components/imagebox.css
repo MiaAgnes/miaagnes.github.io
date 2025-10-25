@@ -1,4 +1,17 @@
-.imagebox { display:block; border-radius:6px; margin:0.6rem auto; }
-.imagebox.placeholder { background: #fff; width: 68%; height: 26vw; }
-.imagebox.project.placeholder { width: 84%; height: 34vw }
-.imagebox img { max-width:100% }
+.imagebox { 
+    display: block; 
+    border-radius: 6px; 
+    margin-top: 1.5rem;
+}
+.imagebox.placeholder { 
+    background: #fff; 
+    width: 68%; 
+    height: 26vw; 
+}
+.imagebox.project.placeholder { 
+    width: 84%; 
+    height: 45vw; 
+}
+.imagebox img { 
+    max-width: 100%; 
+}

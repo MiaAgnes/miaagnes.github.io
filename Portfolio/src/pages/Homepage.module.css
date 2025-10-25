@@ -10,5 +10,10 @@
   align-items: flex-start;
 }
 .inner { width:100%; margin-top:3rem }
-.hero { width:68%; height:26vw }
+.hero { 
+  width:68%;
+  height:26vw;
+  margin: 0.8rem auto; /* center homepage image without affecting projects */
+  display: block;
+}
 .lead { font-size:0.95rem; color:rgba(255,255,255,0.9); text-align:left }

@@ -11,3 +11,15 @@
 }
 .inner { width:100%; margin-top:3rem }
 .cta { margin-top:1rem; background:transparent;border:1px solid rgba(255,255,255,0.5);color:rgba(255,255,255,0.95);padding:0.6rem 1rem;border-radius:999px }
+
+/* Remove default list markers for the skills list */
+.inner ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+.inner li {
+  margin-left: 0;
+  padding-left: 0;
+  color: rgba(255,255,255,0.95);
+}

@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './Tools.module.css'
 import Burger from '../components/Burger'
 
-export default function Tools() {
+export default function Tools({ onBurger }) {
   return (
     <section className={styles.panel}>
-      <Burger />
+      <Burger onClick={onBurger} />
       <div className={styles.inner}>
         <h2>Værktøjer og programmer</h2>
         <ul className={styles.tools}>
