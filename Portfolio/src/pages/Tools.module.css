@@ -1,0 +1,14 @@
+.panel {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #5ea0d1 0%, #8a66c9 60%, #b27adf 100%);
+  color: rgba(255,255,255,0.95);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.inner { width:100%; margin-top:3rem }
+.tools { list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px }
+.tools img{ width:34px;height:34px }

@@ -1,0 +1,99 @@
+/* Mobile-first horizontal panels layout */
+.pm-root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.pm-panels {
+  display: flex;
+  flex-direction: row;
+  width: 600vw; /* 6 panels */
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.pm-panel {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #5ea0d1 0%, #8a66c9 60%, #b27adf 100%);
+  color: rgba(255,255,255,0.95);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.pm-panel .pm-inner {
+  width: 100%;
+  margin-top: 3rem;
+}
+.pm-burger {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.95);
+  font-size: 1.6rem;
+}
+.pm-image.placeholder {
+  width: 68%;
+  height: 26vw;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0.6rem auto 1.2rem auto;
+}
+.pm-image.project.placeholder {
+  width: 84%;
+  height: 34vw;
+}
+.pm-inner h2 {
+  text-align: left;
+  font-weight: 600;
+  margin: 0.6rem 0;
+}
+.pm-lead {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  text-align: left;
+}
+.pm-center {
+  display:flex;align-items:center;justify-content:center;
+}
+.pm-menu nav {
+  display:flex;flex-direction:column;gap:18px;
+  font-size:1.6rem;color:rgba(255,255,255,0.95);
+  text-align:center;
+}
+.pm-menu a { color: inherit; text-decoration: none; }
+.pm-cta {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.95);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+}
+.pm-projects { display:flex;flex-direction:column;gap:1rem;align-items:center }
+.pm-caption{font-size:0.9rem;color:rgba(255,255,255,0.9);text-align:left;margin-left:8%;width:84%}
+.pm-tools { list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px }
+.pm-tools li { display:flex;gap:12px;align-items:center }
+.pm-tools img { width:34px;height:34px }
+.pm-code-icons img{width:30px;height:30px}
+.pm-contact { list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;margin-top:1rem }
+.pm-contact img{width:30px;height:30px;margin-right:8px}
+
+/* make sure body & root don't interfere */
+body, #root { margin:0; padding:0; }
+
+/* accessibility: show focus */
+.pm-burger:focus, .pm-cta:focus, .pm-menu a:focus { outline: 3px solid rgba(255,255,255,0.2) }
+
+/* small adjustments for larger widths (not full responsive implementation, mobile-first) */
+@media (min-width: 700px) {
+  .pm-panels { overflow-x: hidden }
+  .pm-panels { flex-wrap: wrap }
+  .pm-panel { width: 50vw }
+}
