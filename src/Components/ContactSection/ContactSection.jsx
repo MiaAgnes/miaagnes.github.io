@@ -10,13 +10,15 @@ export default function ContactSection() {
         </div>
       </div>
       <div className={styles.tapeColumn}>
-        <img className={styles.tape} src="/images/tape-navn.png" alt="Navn" />
-        <a href="tel:+4512345678" className={styles.tapeTlf}>
-          <img src="/images/tape-tlf.png" alt="Telefon" />
+        <div className={`${styles.tapePiece} ${styles.tapeNavn}`}>
+          Mia Agnes Tandal Danielsen
+        </div>
+        <a href="tel:+4512345678" className={`${styles.tapePiece} ${styles.tapeTlf}`}>
+          +45 50 85 44 44
         </a>
 
-        <a href="mailto:miatd03@yahoo.dk" className={styles.tapeMail}>
-          <img src="/images/tape-mail.png" alt="Mail" />
+        <a href="mailto:miatd03@yahoo.dk" className={`${styles.tapePiece} ${styles.tapeMail}`}>
+          miatd03@yahoo.dk
         </a>
       </div>
     </section>

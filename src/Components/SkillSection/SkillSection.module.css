@@ -1,5 +1,5 @@
 .skillSectionBg {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   color: 292828;
   position: relative;
@@ -17,6 +17,11 @@
   padding-top: 3vh;
   text-align: center;
   color: 292828;
+  font-weight: 500;
+}
+
+.skillSectionText h2 {
+  font-weight: 500;
 }
 
 .skillDescription {
@@ -117,6 +122,6 @@
   transform-origin: 50% 50%;
 }
 
-.vinyl1:hover .progressPath { stroke-dasharray: 211 301.59; }
+.vinyl1:hover .progressPath { stroke-dasharray: 181 301.59; }
 .vinyl2:hover .progressPath { stroke-dasharray: 226 301.59; }
-.vinyl3:hover .progressPath { stroke-dasharray: 187 301.59; }
+.vinyl3:hover .progressPath { stroke-dasharray: 178 301.59; }

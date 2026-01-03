@@ -1,25 +1,24 @@
-import { useState } from "react";
 import styles from "./ProjectsSection.module.css";
 
 export default function ProjectsSection() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
   const projects = [
     {
-      image: "/images/steno-polaroid.png",
-      video: "/videos/steno.mp4",
+      title: "Steno Museet",
+      image: "/images/stenomuseet.png",
+      link: "https://miaagnes.github.io/Eksamensprojekt-steno-museet/",
     },
     {
-      image: "/images/ol-polaroid.png",
-      video: "/videos/ol.mp4",
+      title: "StreamAware",
+      image: "/images/streamaware.png",
+      link: "https://miaagnes.github.io/streamaware/",
     },
     {
-      image: "/images/tbc-polaroid.png",
-      video: "/videos/tbc.mp4",
+      title: "City Escape",
+      image: "/images/cityescape.png",
+      link: "https://miaagnes.github.io/cityescapeproject/",
     },
   ];
 
-  const closeModal = () => setActiveIndex(null);
   return (
     <div id="projects" className={styles.projectsSectionBg}>
       <div className={styles.projectsSectionText}>
@@ -28,42 +27,29 @@ export default function ProjectsSection() {
       </div>
       <div className={styles.projectGrid}>
         {projects.map((project, index) => (
-          <div
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
             className={`${styles.projectWrapper} ${
               styles[`project${index + 1}`]
             }`}
-            onClick={() => setActiveIndex(index)}
           >
-            <div className={styles.breezeWrapper}>
-              <img
-                className={styles.project}
-                src={project.image}
-                alt={`Projekt ${index + 1}`}
-              />
+            <div className={styles.polaroidCard}>
+              <div className={styles.imageContainer}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                />
+              </div>
+              <div className={styles.caption}>
+                <h3>{project.title}</h3>
+              </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
-
-      {activeIndex !== null && (
-        <div className={styles.modal} onClick={closeModal}>
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className={styles.closeButton} onClick={closeModal}>
-              ×
-            </button>
-            <video
-              src={projects[activeIndex].video}
-              autoPlay
-              controls
-              className={styles.modalVideo}
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

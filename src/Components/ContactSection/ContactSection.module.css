@@ -8,7 +8,7 @@
 	background-repeat: no-repeat;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400&display=swap');
 
 .contactSectionBg {
     position: relative;
@@ -18,7 +18,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Spectral', serif;
     font-style: italic;
     color: 292828;
 }
@@ -30,6 +30,11 @@
     font-size: 2.5rem;
     text-align: center;
     color: 292828;
+    font-weight: 500;
+}
+
+.contactSectionText h2 {
+  font-weight: 500;
 }
 
 .contactSectionDescription {
@@ -46,21 +51,65 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5vh;
-    padding-top: 8vh;
+    gap: 4vh; /* Lidt mere afstand */
+    padding-top: calc(8vh - 20px);
 }
 
-img[alt="Navn"], img[alt="Telefon"], img[alt="Mail"] {
-    width: 45vh;
-    height: 11vh;
+.tapePiece {
+  background-color: rgba(194, 214, 205, 0.9);
+  padding: 1.2vh 0;
+  width: 23vw; /* Lidt bredere */
+  display: flex; /* For at centrere indholdet */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Spectral', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #292828;
+  /* Brug filter: drop-shadow så skyggen følger formen */
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
+  backdrop-filter: blur(1px);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  
+  /* Takket kant (tape dispenser look) */
+  clip-path: polygon(
+    2% 0%, 98% 0%, 
+    100% 10%, 98% 20%, 100% 30%, 98% 40%, 100% 50%, 98% 60%, 100% 70%, 98% 80%, 100% 90%, 98% 100%,
+    2% 100%, 
+    0% 90%, 2% 80%, 0% 70%, 2% 60%, 0% 50%, 2% 40%, 0% 30%, 2% 20%, 0% 10%
+  );
+  
+  animation: tapeFloat 3s ease-in-out infinite alternate;
 }
 
-.tapeTlf:hover,
-.tapeMail:hover {
-    transform: scale(1.025) translateY(-0.15vh);
-    transition: transform 0.13s cubic-bezier(.4,2,.6,1), box-shadow 0.13s;
+@keyframes tapeFloat {
+  0% { transform: translateY(0) rotate(calc(var(--rotation) - 1deg)); }
+  100% { transform: translateY(-0.8vh) rotate(calc(var(--rotation) + 1deg)); }
 }
-.tapeTlf,
+
+.tapeNavn {
+  --rotation: -2deg;
+  transform: rotate(var(--rotation));
+  cursor: default; /* Ingen pointer på navnet */
+  animation-delay: 0s;
+}
+
+.tapeTlf {
+  --rotation: 1.5deg;
+  transform: rotate(var(--rotation));
+  animation-delay: 1s;
+}
+
 .tapeMail {
-    transition: transform 0.13s cubic-bezier(.4,2,.6,1), box-shadow 0.13s;
+  --rotation: -1deg;
+  transform: rotate(var(--rotation));
+  animation-delay: 2s;
+}
+
+.tapeTlf:hover, .tapeMail:hover {
+    transform: scale(1.05) rotate(0deg);
+    animation: none; /* Stopper animation ved hover */
 }

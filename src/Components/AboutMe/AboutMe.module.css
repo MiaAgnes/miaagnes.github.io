@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400&display=swap');
 
 /* ------------------ Baggrund ------------------ */
 .aboutMeBg {
@@ -18,25 +18,26 @@
   justify-content: flex-start;
   width: 100%;
   height: 100vh;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   color: 292828;
 }
 
 .aboutMeText {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   font-size: 4rem;
   color: 292828;
   padding-top: 2vh;
   text-align: center;
+  font-weight: 500;
 }
 
 .aboutMeDescription {
   font-size: 2rem;
   text-align: center;
   color: 292828;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   padding-top: 2vh;
 }
@@ -45,11 +46,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 2vw 8vh;
+  gap: 8vh 6vw; /* Mere luft mellem kortene både lodret og vandret */
   justify-items: center;
   align-items: center;
-  width: 60vw;
-  margin: 10vh auto 0 auto;
+  width: 70vw; /* Lidt bredere grid for at give plads */
+  margin: 5vh auto 0 auto;
 }
 
 .factCardWrapper {
@@ -73,10 +74,43 @@
 }
 
 .factCard {
-  width: 18vw;
-  height: auto;
-  border-radius: 1vw;
+  width: 16vw; /* Lidt smallere for at ligne post-its */
+  min-height: 16vw; /* Kvadratisk form */
+  background-color: #d0e8f2; /* Lyseblå post-it farve */
+  border-radius: 0.2vw; /* Skarpere hjørner som papir */
+  padding: 1.5vw;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2); /* Tydeligere skygge */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.factCard:nth-child(1) { transform: translate(0vw, -4vh); }
+.factCard h3 {
+  font-family: 'Spectral', serif;
+  font-style: italic;
+  font-size: 1.65rem;
+  margin-bottom: 1vh;
+  color: #292828;
+}
+
+.factCard p {
+  font-family: 'Spectral', serif;
+  font-size: 1.1rem;
+  color: #292828;
+  line-height: 1.3;
+}
+
+.factCard:hover {
+  transform: scale(1.05) rotate(0deg) !important; /* Retter sig op og zoomer lidt */
+  z-index: 10;
+}
+
+/* Individuel rotation og placering for at se "tilfældigt" ophængt ud */
+.factCardWrapper:nth-child(1) .factCard { transform: rotate(-2deg); }
+.factCardWrapper:nth-child(2) .factCard { transform: rotate(3deg); }
+.factCardWrapper:nth-child(3) .factCard { transform: rotate(1deg); }
+.factCardWrapper:nth-child(4) .factCard { transform: rotate(-3deg); }
 

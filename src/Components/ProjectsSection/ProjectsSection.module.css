@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400&display=swap');
 
 .projectsSectionBg {
 	position: relative;
@@ -8,22 +8,32 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Spectral', serif;
 	font-style: italic;
-	color: 292828;
+	color: #292828;
 }
 
 .projectsSectionText {
+   font-family: 'Spectral', serif;
+   font-style: italic;
    font-size: 2.5rem;
    margin: 0 auto;
    padding-top: 2vh;
    text-align: center;
+   color: #000000;
+   font-weight: 500;
+}
+
+.projectsSectionText h2 {
+  font-weight: 500;
 }
 
 .projectDescription {
+    font-family: 'Spectral', serif;
+    font-style: italic;
     font-size: 2rem;
     text-align: center;
-    color: 292828;
+    color: #000000;
     padding-top: 2vh;
 }
 
@@ -42,15 +52,58 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+  text-decoration: none; /* Fjerner understregning */
+  color: inherit; /* Beholder tekstfarven */
 }
 
 
-.project {
+.polaroidCard {
+  background-color: #e4dcf5; /* Lys lilla farve */
+  padding: 0.8vw 0.8vw 0.8vw 0.8vw; /* Endnu mindre padding i bunden */
+  box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.2);
   width: 16vw;
-  height: auto;
-  border-radius: 1vw;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   animation: polaroidWobble 3.5s ease-in-out infinite alternate;
+  /* Tilføjet box-shadow til transition og gjort den blødere */
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+}
+
+.polaroidCard:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 100;
+  animation: none; /* Stopper animationen så den står stille */
+  box-shadow: 0 1vw 2vw rgba(0,0,0,0.25); /* Tydeligere skygge */
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Kvadratisk billede */
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  margin-top: 0.2vh; /* Endnu mindre afstand */
+  text-align: center;
+  width: 100%;
+}
+
+.caption h3 {
+  font-family: 'Spectral', serif; /* Håndskrifts-agtig font */
+  font-size: 1.5rem;
+  color: #292828;
+  margin: 0;
+  font-weight: 400;
 }
 
 @keyframes polaroidWobble {
@@ -65,16 +118,9 @@
   }
 }
 
-.project1 { transform: translate(3vw, 5vh); }
-.project2 { transform: translate(-2vw, -5vh); }
-.project3 { transform: translate(22vw, -10vh); }
-
-.project {
-  width: 16vw;
-  height: auto;
-  border-radius: 1vw;
-  display: block;
-}
+.project1 { transform: translate(3vw, calc(5vh - 5px)); }
+.project2 { transform: translate(-2vw, calc(-5vh - 5px)); }
+.project3 { transform: translate(22vw, calc(-10vh - 5px)); }
 
 .modal {
   position: fixed;
