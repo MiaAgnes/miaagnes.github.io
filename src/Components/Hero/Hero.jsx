@@ -9,7 +9,7 @@ export default function Hero() {
       <div>
         <h2 className={styles.text}>Mia Agnes Tandal Danielsen</h2>
         <h2 className={styles.text}>Multimediedesigner studerende</h2>
-        <p className={styles.frontendText}>Frontend-design, hvor processen er lige så vigtig som resultatet.</p>
+        <p className={styles.frontendText}>Visuelt design med fokus på proces, funktion og helhed</p>
         <div>
           <a className={styles.cv} href="/Cv-Agnes.pdf" download>Download mit CV</a>
         </div>
