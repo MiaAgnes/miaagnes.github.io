@@ -20,14 +20,14 @@
   height: 100vh;
   font-family: 'Spectral', serif;
   font-style: italic;
-  color: 292828;
+  color: #292828;
 }
 
 .aboutMeText {
   font-family: 'Spectral', serif;
   font-style: italic;
   font-size: 4rem;
-  color: 292828;
+  color: #292828;
   padding-top: 2vh;
   text-align: center;
   font-weight: 500;
@@ -36,7 +36,7 @@
 .aboutMeDescription {
   font-size: 2rem;
   text-align: center;
-  color: 292828;
+  color: #292828;
   font-family: 'Spectral', serif;
   font-style: italic;
   padding-top: 2vh;
@@ -101,6 +101,21 @@
   font-size: 1.1rem;
   color: #292828;
   line-height: 1.3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .aboutMe, .aboutMeBg { height: auto; padding: 6vh 2vw; }
+  .aboutMeText { font-size: 2.6rem; }
+  .factGrid { width: 90vw; gap: 6vh 4vw; }
+  .factCard { width: 40vw; min-height: 20vw; padding: 3.5vw; }
+}
+
+@media (max-width: 640px) {
+  .factGrid { grid-template-columns: 1fr; gap: 4vh; }
+  .factCard { width: 80vw; min-height: 60vw; }
+  .aboutMeText { font-size: 2rem; }
+  .aboutMeDescription { font-size: 1.1rem; }
 }
 
 .factCard:hover {

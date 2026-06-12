@@ -19,3 +19,19 @@ section {
   background: url('/images/himmel-baggrund.png') no-repeat center center fixed;
   background-size: cover;
 }
+
+@media (max-width: 1024px) {
+  html {
+    scroll-snap-type: none;
+  }
+  section {
+    height: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .background {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}

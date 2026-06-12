@@ -9,25 +9,25 @@ export default function AboutMe() {
           <div className={styles.factCardWrapper}>
             <div className={styles.factCard}>
               <h3>Alder & Bopæl</h3>
-              <p>Jeg er 22 år gammel og bor i Horsens sammen med min kæreste, og til sommer flytter vi til Lunderskov i rækkehus.</p>
+              <p>Jeg er 22 år gammel og er for nyeligt flyttet til Lunderskov med min kæreste, hvor jeg søger nye udfordringer.</p>
             </div>
           </div>
           <div className={styles.factCardWrapper}>
             <div className={styles.factCard}>
               <h3>Uddannelse</h3>
-              <p>Jeg studerer lige nu multimediedesigner på Erhvervsakademiet i Aarhus.</p>
+              <p>Jeg er nyuddannet multimedie designer fra Erhvervsakademiet i Aarhus.</p>
             </div>
           </div>
           <div className={styles.factCardWrapper}>
             <div className={styles.factCard}>
               <h3>Fritid</h3>
-              <p>Når jeg ikke laver projekter, elsker jeg at spille alle slags spil og høre musik</p>
+              <p>Min fritid bruger jeg foran min computer, hvor jeg spiller spil med min kæreste og venner.</p>
             </div>
           </div>
           <div className={styles.factCardWrapper}>
             <div className={styles.factCard}>
               <h3>Passion</h3>
-              <p>Jeg har en stor passion for design og elsker at arbejde kreativt med værktøjer som Illustrator og Figma.</p>
+              <p>Jeg har en stor passion for UX, UI og design og elsker at arbejde kreativt med værktøjer som Illustrator og Figma.</p>
             </div>
           </div>
         </div>

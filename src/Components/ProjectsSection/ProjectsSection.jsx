@@ -17,6 +17,11 @@ export default function ProjectsSection() {
       image: "/images/cityescape.png",
       link: "https://miaagnes.github.io/cityescapeproject/",
     },
+    {
+      title: "Heibjerg",
+      image: "/images/heibjerg-portfolio.png",
+      link: "https://www.figma.com/design/oHJFy0jkq1Rmcv1CWLjybx/Interaktiv-prototype-af-app?node-id=0-1&p=f&t=13B2CyoV79jWikk0-0"
+    },
   ];
 
   return (
@@ -27,27 +32,48 @@ export default function ProjectsSection() {
       </div>
       <div className={styles.projectGrid}>
         {projects.map((project, index) => (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={index}
-            className={`${styles.projectWrapper} ${
-              styles[`project${index + 1}`]
-            }`}
-          >
-            <div className={styles.polaroidCard}>
-              <div className={styles.imageContainer}>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                />
+          project.link ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className={`${styles.projectWrapper} ${
+                styles[`project${index + 1}`] ?? ""
+              }`}
+            >
+              <div className={styles.polaroidCard}>
+                <div className={styles.imageContainer}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </div>
+                <div className={styles.caption}>
+                  <h3>{project.title}</h3>
+                </div>
               </div>
-              <div className={styles.caption}>
-                <h3>{project.title}</h3>
+            </a>
+          ) : (
+            <div
+              key={index}
+              className={`${styles.projectWrapper} ${
+                styles[`project${index + 1}`] ?? ""
+              }`}
+            >
+              <div className={styles.polaroidCard}>
+                <div className={styles.imageContainer}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </div>
+                <div className={styles.caption}>
+                  <h3>{project.title}</h3>
+                </div>
               </div>
             </div>
-          </a>
+          )
         ))}
       </div>
     </div>

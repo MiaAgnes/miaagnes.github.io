@@ -13,6 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fluid typography: keeps sizes proportional across mobile, tablet, desktop */
+html {
+  font-size: clamp(14px, 1.2vw + 12px, 18px);
+}
+
+h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.5rem); }
+h3 { font-size: clamp(1.1rem, 2.4vw, 1.6rem); }
+p, span, li { font-size: clamp(0.95rem, 1.6vw, 1.1rem); }
+button { font-size: clamp(0.9rem, 1.4vw, 1rem); }
+
+/* Small screens: ensure comfortable spacing */
+@media (max-width: 640px) {
+  html { font-size: clamp(13px, 2.5vw, 15px); }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,8 +40,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +79,55 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Softer tablet/mobile spacing: keep breathing room natural instead of compressed */
+@media (max-width: 1024px) {
+  html, body { min-height: auto; }
+  section, .aboutMeBg, .projectsSectionBg, .skillSectionBg, .contactSectionBg {
+    padding: clamp(4vh, 5vw, 6vh) clamp(3vw, 4vw, 5vw) !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .hero {
+    padding-top: clamp(8vh, 10vw, 12vh) !important;
+    padding-left: clamp(4vw, 6vw, 8vw) !important;
+  }
+  h1, h2, h3 { margin-top: 0.35rem; margin-bottom: 0.35rem; }
+  p { margin-top: 0.35rem; margin-bottom: 0.7rem; }
+  .factGrid, .projectGrid, .vinylGrid {
+    gap: clamp(2.5vh, 3vw, 5vh) clamp(3vw, 4vw, 6vw) !important;
+    width: min(92vw, 1100px) !important;
+    margin: clamp(2vh, 3vw, 4vh) auto !important;
+  }
+  .polaroidCard, .factCard {
+    padding: clamp(2vw, 3vw, 3vw) !important;
+    margin: 0.5vh 0 !important;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2) !important;
+  }
+  .tapeColumn { padding-top: clamp(2vh, 3vw, 4vh) !important; gap: clamp(2vh, 3vw, 4vh) !important; }
+  .bottomText { display: block !important; position: static !important; margin-top: clamp(1vh, 2vw, 2vh) !important; padding: 0 6vw !important; }
+  .pil { display: none !important; }
+  img, .heroImage, .projectThumb { max-height: 55vh !important; height: auto !important; width: auto !important; }
+  .container, .contentWrapper { max-width: 94vw !important; padding-left: 3vw !important; padding-right: 3vw !important; }
+  .polaroidCard .caption, .factCard .caption { font-size: 0.95rem !important; }
+  .skillVinyl, .vinylWrapper { width: 68px !important; height: 68px !important; }
+}
+
+@media (max-width: 640px) {
+  section, .aboutMeBg, .projectsSectionBg, .skillSectionBg, .contactSectionBg {
+    padding: 4vh 4vw !important;
+  }
+  .hero { padding-top: 6vh !important; padding-left: 4vw !important; }
+  h1, h2, h3 { margin-top: 0.3rem; margin-bottom: 0.3rem; }
+  p { margin-top: 0.3rem; margin-bottom: 0.6rem; font-size: clamp(0.92rem, 2.8vw, 1rem); }
+  .factGrid, .projectGrid, .vinylGrid { gap: 3vh 4vw !important; width: 94vw !important; margin: 2.5vh auto !important; }
+  .polaroidCard, .factCard { padding: 3vw !important; margin: 1vh 0 !important; }
+  .tapeColumn { padding-top: 2vh !important; gap: 2vh !important; }
+  .bottomText { display: block !important; font-size: 0.95rem !important; padding: 0 4vw !important; margin-top: 1.5vh !important; }
+  .pil { display: none !important; }
+  img, .heroImage, .projectThumb { max-height: 48vh !important; height: auto !important; width: auto !important; }
+  .container, .contentWrapper { max-width: 94vw !important; padding-left: 3vw !important; padding-right: 3vw !important; }
+  .polaroidCard .caption, .factCard .caption { font-size: 0.95rem !important; }
+  .skillVinyl, .vinylWrapper { width: 62px !important; height: 62px !important; }
 }
