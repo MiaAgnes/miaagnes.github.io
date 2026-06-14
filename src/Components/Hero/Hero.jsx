@@ -11,7 +11,7 @@ export default function Hero() {
         <h2 className={styles.text}>Multimediedesigner studerende</h2>
         <p className={styles.frontendText}>Visuelt design med fokus på proces, funktion og helhed</p>
         <div>
-          <a className={styles.cv} href="/Cv-Agnes.pdf" download>Download mit CV</a>
+          <a className={styles.cv} href="/agnes-cv.pdf" download>Download mit CV</a>
         </div>
         <button className={styles.button} onClick={() => {
           const el = document.getElementById('projects');
