@@ -9,13 +9,13 @@ export default function AboutMe() {
           <div className={styles.factCardWrapper}>
             <div className={styles.factCard}>
               <h3>Alder & Bopæl</h3>
-              <p>Jeg er 22 år gammel og er for nyeligt flyttet til Lunderskov med min kæreste, hvor jeg søger nye udfordringer.</p>
+              <p>Jeg er 23 år gammel og er for nyeligt flyttet til Lunderskov med min kæreste, hvor jeg søger nye udfordringer.</p>
             </div>
           </div>
           <div className={styles.factCardWrapper}>
             <div className={styles.factCard}>
               <h3>Uddannelse</h3>
-              <p>Jeg er nyuddannet multimedie designer fra Erhvervsakademiet i Aarhus.</p>
+              <p>Jeg er nyuddannet multimediedesigner fra Erhvervsakademiet i Aarhus.</p>
             </div>
           </div>
           <div className={styles.factCardWrapper}>
